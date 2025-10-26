@@ -1,0 +1,22 @@
+<!--
+  Launch file for the full autonomous Mirte robot setup.
+  
+  This launch file:
+  1. Starts the Mirte Gazebo simulation (Gazebo + RViz)
+  2. Runs the pcl_obstacle_detector_node for 3D obstacle detection
+  3. Runs the control_barrel_world_node for robot navigation control
+-->
+
+
+<launch>
+
+  <!-- Start simulator (Gazebo + RViz) -->
+  <include file="$(find-pkg-share mirte_gazebo)/launch/rsp_lab4.launch.xml"/>
+
+  <!-- Start the obstacle detector -->
+  <node pkg="pcl_obstacle_detector" exec="pcl_obstacle_detector_node" name="pcl_obstacle_detector_node"/>
+
+  <!-- Start the control logic -->
+  <node pkg="control_barrel_world" exec="control_barrel_world_node" name="control_barrel_world_node"/>
+
+</launch>
