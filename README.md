@@ -1,8 +1,10 @@
-## Course Title: RO47003 - Robot Software Practicals ##
-#### Lab practicum: lab4/group104 ####
-#### Name: Panagiotis Sarikas - 6553745 ####
-#### Date: 16/10/2025 ####
-<br><br>
+## Summary
+
+This project implements an autonomous driving system for a simulated mobile robot (Mirte) using ROS 2 (Humble). The robot navigates through a cone-defined track while avoiding obstacles and stopping for pedestrians.
+
+The system integrates 3D obstacle detection using PCL point cloud processing and 2D pedestrian detection using OpenCV-based bounding boxes. Detected objects are fused in a control node that generates velocity commands to steer the robot safely through the environment.
+
+The project was developed as the final assignment of the TU Delft course “Robot Software Practicals (RO47003)”, demonstrating skills in Linux, Git, C++, ROS 2, perception, and control in a simulated autonomous driving scenario.
 
 ## Sources ##
 1. Manual
